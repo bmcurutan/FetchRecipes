@@ -11,7 +11,21 @@ import SwiftUI
 struct FetchRecipesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                RecipesListView()
+                    .navigationBarTitleDisplayMode(.inline) 
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            HStack {
+                                Image("fetch-logo")
+                                    .resizable()
+                                    .frame(width: 32, height: 32)
+                                Text("Fetch Recipes")
+                                    .font(.headline)
+                            }
+                        }
+                    }
+            }
         }
     }
 }
