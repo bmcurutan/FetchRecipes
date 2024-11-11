@@ -52,4 +52,8 @@ class RecipesViewModel: ObservableObject {
             return recipes
         }
     }
+
+    func fetchRandomRecipe() -> Recipe? {
+        return recipes.randomElement()
+    }
 }

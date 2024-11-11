@@ -23,8 +23,8 @@ struct RecipesFilterView: View {
                     }) {
                         Text("\(cuisine)")
                             .padding()
-                            .background(selectedCuisine != cuisine ? Color(UIColor.secondarySystemBackground) : Color.blue)
-                            .foregroundColor(selectedCuisine != cuisine ? Color.black : Color.white)
+                            .background(selectedCuisine != cuisine ? Color(UIColor.secondarySystemBackground) : .blue)
+                            .foregroundColor(selectedCuisine != cuisine ? .black : .white)
                             .cornerRadius(8)
                     }
                 }

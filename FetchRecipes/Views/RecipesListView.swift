@@ -50,6 +50,23 @@ struct RecipesListView: View {
             fetchRecipes()
         }
         .padding(.top, 0)
+        .overlay(
+            Button(action: {
+                if let recipe = viewModel.fetchRandomRecipe() {
+                    filteredRecipes = [recipe]
+                }
+            }) {
+                Text("🦴 Go Fetch!")
+                    .frame(height: 24)
+                    .padding()
+                    .font(.headline)
+                    .background(Color.background)
+                    .foregroundStyle(.white)
+                    .cornerRadius(24)
+            }
+            .buttonStyle(PlainButtonStyle()),
+            alignment: .bottom
+        )
     }
 
     private func fetchRecipes() {

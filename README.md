@@ -5,10 +5,11 @@
 - No special setup required. Download project from Github and run on an iOS 18+ device/simulator.
 - App's main page loads with the "Fetch Recipes" logo and title, filter buttons to shortlist recipes by cuisine, and the list of recipes.
 - The cuisines are sourced from the json data. Tapping on a cuisine (e.g., "Canadian") updates the list to only show recipes from the selected cuisine. Tap the selected cuisine again to unselect.
-- Pulling recipe list down to refresh re-fetches the json data and resets the cuisine filter.
+- Pull recipe list down to refresh the json data and reset the cuisine filter.
 - Tap on the notes icon (intended as a recipe icon) to view a web view with the recipe, if available.
 - Tap on the video icon to view the Youtube video, if available. 
 - Scroll down the list fast - images load as the list item becomes visible.
+- Tap the "Go Fetch!" button for the app to randomly choose a recipe for you.
 - Restarting the app refreshes the data.
 - The app doesn't support orientations other than upright portrait.
 
@@ -28,7 +29,7 @@
 ### Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
 
 - Cuisines could be an enum if we know them rather than sourcing strings from the json data. Since the latter was implemented, the selected cuisine is stored here as a string instead of an index if there's a version of this app where the data is different upon a re-fetch and the cuisine list changes (e.g., cuisines added or removed).
-- Didn't optimize for dark mode, lost network connection, nor opening relevant installed apps as applicable (e.g., tap on video button opens Youtube app instead of web view if the app is installed). 
+- Didn't optimize for dark mode, accessibility, lost network connection, nor opening relevant installed apps as applicable (e.g., tap on video button opens Youtube app instead of web view if the app is installed). 
 
 ### Weakest Part of the Project: What do you think is the weakest part of your project?
 
@@ -52,6 +53,5 @@
 - Could have added some UIKit views to show the interactability with SwiftUI and leverage the strengths of both frameworks.
 - RecipesEmptyView and RecipesErrorView are so similar here that the same SwiftUI file could be used for both, but decided against it since there's a version of this app where these screens include different details and UI. 
 - The added cuisine filter is built on the recipes list provided and so the user is unable to do fuzzy search (e.g., if the list is longer and more difficult to browse, if a recipe follows more than one cuisine, if there are typos in the cuisines)
-- Had another idea for a bone-shaped floating action button to fetch a random recipe from the list.
 - Had another idea to integrate AI-powered chat and suggest recipe-related prompts, such as "how do you roll fondant".
 
