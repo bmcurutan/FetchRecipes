@@ -48,7 +48,7 @@ struct RecipeListItemView: View {
                         isSourceWebViewPresented = true
                     }) {
                         Image(systemName: "note.text")
-                            .foregroundStyle(.link)
+                            .foregroundStyle(Color.accent)
                     }
                 }
                 if let youtubeUrl = recipe.youtubeUrl, URL(string: youtubeUrl) != nil {
@@ -56,7 +56,7 @@ struct RecipeListItemView: View {
                         isYoutubeWebViewPresented = true
                     }) {
                         Image(systemName: "video")
-                            .foregroundStyle(.link)
+                            .foregroundStyle(Color.accent)
                     }
                 }
             }

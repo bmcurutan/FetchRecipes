@@ -60,7 +60,7 @@ struct RecipesListView: View {
                     .frame(height: 24)
                     .padding()
                     .font(.headline)
-                    .background(Color.background)
+                    .background(Color.accent)
                     .foregroundStyle(.white)
                     .cornerRadius(24)
             }

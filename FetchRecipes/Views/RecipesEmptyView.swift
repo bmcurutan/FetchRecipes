@@ -21,7 +21,7 @@ struct RecipesEmptyView: View {
             .padding(.bottom, 16)
         Button(action: refreshAction) {
             Image(systemName: "arrow.clockwise")
-                .foregroundStyle(.link)
+                .foregroundStyle(Color.accent)
                 .imageScale(.large)
         }
     }

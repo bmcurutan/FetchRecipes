@@ -21,7 +21,7 @@ struct RecipesErrorView: View {
             .padding(.bottom, 16)
         Button(action: retryAction) {
             Image(systemName: "arrow.clockwise")
-                .foregroundStyle(.red)
+                .foregroundStyle(Color.accent)
                 .imageScale(.large)
         }
     }
