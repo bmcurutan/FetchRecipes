@@ -12,6 +12,8 @@
 - Restarting the app refreshes the data.
 - The app doesn't support orientations other than upright portrait.
 
+![recording](https://github.com/user-attachments/assets/f91b1be5-30ac-44c4-8f9f-86b934e0db55)
+
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
 
 - Architecture: MVVM architecture pattern widely used in iOS and Android development. It separates business logic (i.e., view model) and UI (i.e., views) and improves scability, reusability, testability, and maintainability. For example, views only store the data they use.
@@ -40,6 +42,7 @@
 
 ### Additional Information: Is there anything else we should know? Feel free to share any insights or constraints you encountered.
 
+- Additional improvement: When a cuisine button is partially visible and that cuisine is selected, automatically scroll the filter view to fully display the selected button.
 - Additional improvement: Add a save state (even if it's just stored locally and without authentication, such as with User Defaults), so user can shortlist favorite recipes.
 - Additional improvement: Add some UI tests.
 - Additional improvement: Add tap functionality to the list item image (sourced by small URL) to show a full screen view of the image (sourced by large URL).
