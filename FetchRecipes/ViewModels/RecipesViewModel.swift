@@ -23,6 +23,7 @@ class RecipesViewModel: ObservableObject {
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
 
             if let error {
+                print(error.localizedDescription)
                 completion(nil, nil, error)
                 return
             }
