@@ -17,7 +17,7 @@
 
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
 
-- Architecture: MVVM architecture pattern widely used in iOS and Android development. It separates business logic (i.e., view model) and UI (i.e., views) and improves scability, reusability, testability, and maintainability. For example, views only store the data they use.
+- Architecture: MVVM architecture pattern widely used in iOS and Android development. It separates business logic (i.e., view model) and UI (i.e., views) and improves scability, reusability, testability, and maintainability. For example, views only store the data they use. Since this is a simple app, folders are organized by type (e.g., Views), but in a larger app, it may make more sense to organize by module (e.g., Recipe views and view model)
 - UI/UX: Created a clean, aesthetic user interface that is intuitive and effortless. Used iOS conventions (SwiftUI) and techniques and maintaining a focus on scability and maintainability. 
 - Performance: Load data and download images async when needed (refreshed) and cache images to disk to reduce network usage with the Kingfisher package.
 - Testing: Test coverage for the recipe models and view model.
